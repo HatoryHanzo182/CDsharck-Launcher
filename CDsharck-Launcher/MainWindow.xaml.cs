@@ -22,6 +22,7 @@ using System.Diagnostics;
 using System.Threading;
 using Newtonsoft.Json;
 using System.ComponentModel;
+using System.Reflection;
 
 namespace CDsharck_Launcher
 {
@@ -210,7 +211,7 @@ namespace CDsharck_Launcher
             {
                 TextBlock text = new TextBlock()
                 {
-                    Text = $"update 00.0{i + 1} added bus \n Selecting a car in the main menu added launcher fixed machine material when choosing color\t\t\t\t",
+                    Text = $"NEW UPDATE 00.0{i+1} added bus \n Selecting a car in the main menu added launcher fixed machine material when choosing color\t\t\t",
                     TextWrapping = TextWrapping.Wrap
                 };
                 listRound.Items.Add(text);
