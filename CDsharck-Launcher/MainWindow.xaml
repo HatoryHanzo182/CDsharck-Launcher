@@ -234,7 +234,7 @@
                 <ProgressBar x:Name="ProgressBar_ProgressDownload" BorderThickness="0.001"  Grid.Row="2" Height= "8" VerticalAlignment="Center" Foreground="#FFAFFC41" 
                              Margin="12,0,1,0" Background="{x:Null}" BorderBrush="#FFAFFC41">
                     <ProgressBar.Effect>
-                        <DropShadowEffect ShadowDepth="0" Color="#FFAFFC41" Opacity="1" BlurRadius="20"/>
+                        <DropShadowEffect x:Name="ProgressBar_ProgressDownload_shadow" ShadowDepth="0" Color="#FFAFFC41" Opacity="1" BlurRadius="20"/>
                     </ProgressBar.Effect>
                     <ProgressBar.OpacityMask>
                         <VisualBrush Visual="{Binding ElementName=MaskBorder}"/>
@@ -314,7 +314,7 @@
                     </Button.Background>
                 </Button>
                 <Label x:Name="Label_Path" Content="..." HorizontalAlignment="Left" Width="172.75" Background="{x:Null}" Foreground="#FFFCE941" HorizontalContentAlignment="Center" Padding="5,5,5,20" FontSize="20"
-                   UseLayoutRounding="False" Margin="35,18.25,0,0" Grid.Row="1" Height="50.75" VerticalAlignment="Top" Cursor="Hand" RenderTransformOrigin="0.5,0.5"/>
+                   UseLayoutRounding="False" Margin="35,18.25,0,0" Grid.Row="1" Height="50.75" VerticalAlignment="Top" Cursor="Hand" RenderTransformOrigin="0.5,0.5" MouseLeftButtonDown="Button_Puth_Click"/>
                 <Button x:Name="Button_Play" Content="" Margin="19,4,0,0" Height="60" Style="{DynamicResource ButtonStylePlay}" Grid.Row="1" VerticalAlignment="Top" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="200" Click="Button_Play_Click" d:IsHidden="True">
                     <Button.Background>
                         <ImageBrush ImageSource="Img/buttons/play/not pressed.png"/>

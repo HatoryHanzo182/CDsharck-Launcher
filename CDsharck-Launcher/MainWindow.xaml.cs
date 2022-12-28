@@ -73,15 +73,15 @@ namespace CDsharck_Launcher
 
             DownloadAttributes(true);
 
-            String url = "https://github.com/FacePunch1337/HeatCars_PreAlphaBuild/archive/refs/heads/main.zip";
+            const String url = "https://github.com/FacePunch1337/HeatCars_PreAlphaBuild/archive/refs/heads/main.zip";
 
             _httpLoader = new HttpDownloader(url, save_file.FileName);
             _httpLoader.DownloadCompleted += _httpLoader_DownloadCompleted;
             _httpLoader.ProgressChanged += _httpLoader_ProgressChanged;
             _httpLoader.Start();
 
-            Label_Path.Content = save_file.FileName;
             Button_Puth.IsEnabled = false;
+            Label_Path.IsEnabled = false;
             Button_Download.IsEnabled = false;
             MainWind.Cursor = Cursors.Wait;
         }
@@ -98,6 +98,7 @@ namespace CDsharck_Launcher
                 MainWind.Cursor = Cursors.Arrow;
 
                 MessageBox.Show("Download completed successfully", "Download message", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+
                 DownloadAttributes(false);
 
                 using (StreamWriter write = File.CreateText("DATA.json"))
@@ -136,11 +137,8 @@ namespace CDsharck_Launcher
 
         private void Button_Puth_Click(object sender, RoutedEventArgs e)
         {
-
             if (save_file.ShowDialog() == true)
-            {
                 Label_Path.Content = save_file.FileName;
-            }
             else
                 return;
         }
@@ -170,6 +168,7 @@ namespace CDsharck_Launcher
             {
                 Directory.Delete(keeper.game_puth, true);
                 File.Delete("DATA.json");
+                save_file.FileName = "HeatCars";
                 IsRemuve(true);
 
                 MessageBox.Show("Deleted  ;(", ":(", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -214,7 +213,6 @@ namespace CDsharck_Launcher
                     Text = $"update 00.0{i + 1} added bus \n Selecting a car in the main menu added launcher fixed machine material when choosing color\t\t\t\t",
                     TextWrapping = TextWrapping.Wrap
                 };
-
                 listRound.Items.Add(text);
             }
         }
@@ -283,9 +281,11 @@ namespace CDsharck_Launcher
                 var solorBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#fc1937"));
                 MaskBorder.Visibility = Visibility.Visible;
                 MaskBorder.BorderBrush = solorBrush;
+                ProgressBar_ProgressDownload.Visibility = Visibility.Visible;
                 ProgressBar_ProgressDownload.BorderBrush = solorBrush;
                 ProgressBar_ProgressDownload.Foreground = solorBrush;
                 ProgressBar_ProgressDownload.Value = 100;
+                ProgressBar_ProgressDownload_shadow.Color = Color.FromRgb(252, 25, 55);
                 Label_isDownload.Visibility = Visibility.Visible;
                 Label_isDownload.Foreground = solorBrush;
                 Label_isDownload.Content = "Removal...";
@@ -298,9 +298,11 @@ namespace CDsharck_Launcher
                 var solorBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFAFFC41"));
                 MaskBorder.Visibility = Visibility.Hidden;
                 MaskBorder.BorderBrush = solorBrush;
+                ProgressBar_ProgressDownload.Visibility = Visibility.Hidden;
                 ProgressBar_ProgressDownload.BorderBrush = solorBrush;
                 ProgressBar_ProgressDownload.Foreground = solorBrush;
                 ProgressBar_ProgressDownload.Value = 0;
+                ProgressBar_ProgressDownload_shadow.Color = Color.FromRgb(252, 25, 55); ;
                 Label_isDownload.Visibility = Visibility.Hidden;
                 Label_isDownload.Foreground = solorBrush;
                 Label_isDownload.Content = "Download...";
