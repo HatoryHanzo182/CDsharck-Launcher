@@ -197,13 +197,13 @@
                     <Rectangle.Fill>
                         <VisualBrush>
                             <VisualBrush.Visual>
-                                <MediaElement x:Name="MediaElement_video" Source="Media/VidosTest.mp4" Stretch="Fill" LoadedBehavior="Manual" Volume="50" Margin="9">
+                                <MediaElement x:Name="MediaElement_video" Source="Media/HeatCarsDemo.mp4" Stretch="Fill" LoadedBehavior="Manual" Volume="50" Margin="9">
                                     <MediaElement.Triggers>
                                         <EventTrigger RoutedEvent="MediaElement.Loaded">
                                             <EventTrigger.Actions>
                                                 <BeginStoryboard>
                                                     <Storyboard>
-                                                        <MediaTimeline Source="Media/VidosTest.mp4" Storyboard.TargetName="MediaElement_video"  RepeatBehavior="Forever"/>
+                                                        <MediaTimeline Source="Media/HeatCarsDemo.mp4" Storyboard.TargetName="MediaElement_video"  RepeatBehavior="Forever"/>
                                                     </Storyboard>
                                                 </BeginStoryboard>
                                             </EventTrigger.Actions>

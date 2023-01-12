@@ -125,7 +125,7 @@
     <Resource Include="Img\Volume\VolumeTrue.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Media\VidosTest.mp4">
+    <None Include="Media\HeatCarsDemo.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

@@ -303,7 +303,7 @@ namespace CDsharck_Launcher
                 ProgressBar_ProgressDownload.BorderBrush = solorBrush;
                 ProgressBar_ProgressDownload.Foreground = solorBrush;
                 ProgressBar_ProgressDownload.Value = 0;
-                ProgressBar_ProgressDownload_shadow.Color = Color.FromRgb(252, 25, 55); ;
+                ProgressBar_ProgressDownload_shadow.Color = Color.FromRgb(175, 252, 65); ;
                 Label_isDownload.Visibility = Visibility.Hidden;
                 Label_isDownload.Foreground = solorBrush;
                 Label_isDownload.Content = "Download...";
