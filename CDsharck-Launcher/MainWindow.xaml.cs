@@ -23,6 +23,9 @@ using System.Threading;
 using Newtonsoft.Json;
 using System.ComponentModel;
 using System.Reflection;
+using System.Windows.Controls.Primitives;
+using System.Xaml.Permissions;
+using System.Xaml;
 
 namespace CDsharck_Launcher
 {
@@ -214,7 +217,7 @@ namespace CDsharck_Launcher
                     Text = $"NEW UPDATE 00.0{i+1} added bus \n Selecting a car in the main menu added launcher fixed machine material when choosing color\t\t\t",
                     TextWrapping = TextWrapping.Wrap
                 };
-                listRound.Items.Add(text);
+                List_Round.Items.Add(text);
             }
         }
 
