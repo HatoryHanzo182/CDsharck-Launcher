@@ -26,6 +26,7 @@ using System.Reflection;
 using System.Windows.Controls.Primitives;
 using System.Xaml.Permissions;
 using System.Xaml;
+using System.Windows.Media.Animation;
 
 namespace CDsharck_Launcher
 {

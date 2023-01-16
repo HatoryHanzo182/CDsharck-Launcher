@@ -141,6 +141,7 @@
             </Setter>
         </Style>
 
+        
         <Style x:Key="RepeatButtonTransparent" TargetType="{x:Type RepeatButton}">
             <Setter Property="OverridesDefaultStyle" Value="true"/>
             <Setter Property="Background" Value="#262626"/>
